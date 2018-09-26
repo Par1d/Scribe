@@ -1,0 +1,27 @@
+﻿@model System.Collections.Generic.List<Scribe.Models.Customer>
+@{
+    ViewBag.Title = "Customers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Customers</h2>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>City</th>
+            <th>State</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(Scribe.Models.Customer cust in @Model)
+        {
+            <tr>
+                <td>@cust.name</td>
+                <td>@cust.city</td>
+                <td>@cust.state</td>
+            </tr>
+        }
+    </tbody>
+</table>
